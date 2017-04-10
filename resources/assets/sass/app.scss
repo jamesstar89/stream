@@ -1,0 +1,47 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import "variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.view-1 {
+  font-size:12px;
+}
+.view-2 {
+  font-size:15px;
+}
+.view-3 {
+  font-size:20px;
+}
+
+.posts-table {
+	display:none;
+}
+
+.app-container {
+	.navbar {
+	    background-color: #3097D1;
+	    border: 0;
+	    border-radius: 0;
+		margin-bottom:60px;
+	  	.container-fluid {
+	  		margin:0;
+		    .navbar-brand {
+		    	color:white;
+		    	.badge {
+		    		background-color:#2579a9;
+		    	}
+		    }
+		    .navbar-nav {
+		    	a {
+		    		color:white;
+		    	}
+		    }
+		}
+	}
+	.manage-users-container {
+	  margin-top:28px;
+	}
+	.link-container {
+		margin-top:32px;
+	}
+}
