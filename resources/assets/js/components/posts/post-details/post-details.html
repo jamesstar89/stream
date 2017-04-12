@@ -1,0 +1,36 @@
+<!-- AngularJS posts -->
+<div class="post ng-cloak" ng-show="page.loaded===true" ng-repeat="detail in details">
+    <h4 style="font-size:32px;line-height:1.2;padding-bottom:10px;margin-bottom:15px;border-bottom:1px solid #eaeaea">
+        <a href="/tag/<% ::detail.tags[0].id %>#/list"><span style="background:rgb(238, 238, 238);margin-right:5px;display:inline-block;border-radius:5px;padding:5px;color:#474747"><% ::detail.tags[0].name %></span></a>
+        <span style="background:rgb(238, 238, 238);margin-right:5px;display:inline-block;border-radius:5px;padding:5px;color:#474747"><% ::detail.author.author_prefix %></span>
+            <% ::detail.title %>
+    </h4>
+    <div ng-repeat="photo in detail.photos" ng-if="detail.photos.length > 0 && $index === 0" class="feature-image details" style="background-image: url('<% ::photo.url %>');"></div>
+    <p ng-bind-html="trustAsHtml(detail.body)" style="padding-bottom:40px;font-size:17px;white-space:pre-wrap;"></p> 
+    <div class="photo-grid details">
+        <div class="row first-row">
+            <div ng-class="($index==1) ? 'col box-1 ' : 'col box-2'" ng-repeat="photo in detail.photos" ng-if="detail.photos.length > 0 && ($index === 1 || $index === 2)">
+                    <div class="image-holder" style="background-image: url('<% ::photo.url %>');"></div>
+                <div class="text-box">
+                    <p></p>  
+                </div>
+            </div>
+        </div>
+        <div class="row second-row" ng-repeat="photo in detail.photos" ng-if="detail.photos.length > 0 && $index === 3">
+            <div class="col box-3">
+                <div class="image-holder" style="background-image: url('<% ::photo.url %>');"></div>
+            </div>
+            <div class="col box-4">
+                <div class="text-box">
+                    <p></p>  
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <optionalbuttons></optionalbuttons>
+            <editbutton></editbutton>
+        </div>
+    </div>
+</div>

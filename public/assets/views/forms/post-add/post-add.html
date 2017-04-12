@@ -1,0 +1,87 @@
+<a ng-click="closeOverlay()" style="float:right;position:absolute;top:15px;right:20px;cursor:pointer">
+	<span class="glyphicon glyphicon-remove" aria-hidden="true" style="font-size:27px"></span>
+</a>
+<div class="row" style="margin-top:65px">
+  <div class="col-md-3 hidden-xs hidden-sm">
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6">
+    <form name="postAddForm" action="post/create" method="post" class="post-add-form" enctype="multipart/form-data">
+      <input type="hidden" name="_token" />
+      <div class="post-add-group">
+          <h1>Add Post</h1>
+          <div class="alert alert-danger" role="alert" style="margin-bottom:10px;display:none">
+              <ul style="font-size:15px;">
+              </ul>
+          </div>
+          <div class="alert alert-info" role="alert" style="margin-bottom:10px;font-size:15px;display:none;">
+              Ready to publish.
+          </div>
+          <div class="form-group">
+            <input type="text" name="title" placeholder="Title" class="form-control entry" style="min-width:400px;height:auto;font-size:17px;" />
+          </div>
+          <div class="form-group" style="display:none">
+            <h4 style="font-size:15px">Similar post found</h4>
+            <ul style="font-size:15px">
+              <li>abc</li>
+            </ul>  
+          </div>
+          <div class="form-group">
+            <textarea type="text" name="body" placeholder="Body" class="form-control entry" style="min-width:400px;height:300px;font-size:17px;"></textarea>
+          </div>
+          <div class="form-group get-stream" style="display:none">
+            <div class="input-group">
+                <input type="text" name="stream" placeholder="Stream" ng-model="tagSearchData" ng-change="tagSearch()" class="form-control entry" style="min-width:400px;height:auto;font-size:17px;" />
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default select-button" style="height:38px;font-size:16px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;" ng-click="selectStream($event)">Select</button>
+                    <button type="button" class="btn btn-default create-button" style="height:38px;font-size:16px;display:none" data-tag="<% tagSearchData %>" ng-click="createNewStream($event)">Create</button>
+                </div>
+            </div>
+          </div>
+          <div class="form-group tag-results-wrapper" style="display:none">
+            <h4 style="font-size:17px">Recommended streams</h4>
+            <div class="tag-results" style="font-size:17px;">
+            </div>
+          </div>
+          <div class="create-new-tag" style="display:none;margin:10px 0 20px 0">
+              <div style="font-size:17px">Stream <a href="javascript:void(0)" data-tag="<% tagSearchData %>" ng-click="createNewStream($event)"><% tagSearchData %></a> not found, be the first to <a href="javascript:void(0)" data-tag="<% tagSearchData %>" ng-click="createNewStream($event)">create</a> it.</div>
+          </div>
+          <div class="form-group selected-stream" style="display:none">
+            <input type="text" name="displaystream" value="" class="form-control" disabled style="min-width:400px;height:auto;font-size:17px;" />
+            <input type="hidden" name="streamid" value="0" />
+            <input type="hidden" name="streamname" value="0" />
+            <a href="javascript:void(0)" style="font-size:15px;display:block;margin-top:8px;" ng-click="changeStream()">Change stream</a> 
+          </div>
+          <div class="row form-group" style="margin:0 0 15px 0;">
+            <div class="col-xs-6 text-primary text-left text-preloader" style="padding:0;font-weight:bold;font-size:15px;display:none;">Please wait while photos upload.</div>
+            <a href="javascript:void(0)" class="col-xs-6 text-right" style="float:right;padding:0;font-size:15px;" ng-click="addImage()">Add images</a> 
+          </div>
+          <div class="form-group text-right">
+            <button type="button" ng-click="publish(picFile)" class="btn edit-button btn-primary" style="height:38px;font-size:16px;padding:6px 19px;">Publish</button>
+          </div>
+        </div>
+        <!-- image section -->
+        <div class="image-add-group" style="display:none;">
+          <h1>Add Image</h1>
+          <div class="form-group">
+            <div class="well">
+                <div class="text-center" ng-hide="files.length > 0">
+                    <button ngf-select="uploadFiles($files, $invalidFiles)" class="btn btn-default" multiple accept="image/*" ngf-max-files="4" ngf-max-height="1800" ngf-max-size="2MB" style="height:38px;font-size:16px">Select Photos</button>
+                </div>
+                <div ng-repeat="f in files" ng-show="f" style="font:smaller">
+                    <div style="margin-bottom:5px">
+                        <img ng-show="postAddForm.file.$valid" ngf-thumbnail="f" class="thumb" style="width:100px;margin-right:12px;"><button class="btn btn-danger" style="height:38px;font-size:16px" ng-click="deleteFile($index)">Remove</button>       
+                    </div>
+                </div>
+                <div ng-repeat="f in errFiles" style="font-size:15px;" class="text-danger"><%f.name%> <%f.$error%> <%f.$errorParam%></div>
+            </div>
+          </div>
+          <div class="form-group text-right">
+            <span style="font-size:15px;" class="text-muted">Select up to 4 photos.</span>
+          </div>
+          <div class="form-group text-right">
+            <button type="button" class="btn btn-primary" style="height:38px;font-size:16px" ng-click="finishPost()">Finish post</button>
+          </div>
+        </div>
+      </form>
+  </div>  
+</div>

@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "version": "2.9.50",
+  "name": "StreamPackages",
+  "description": "Stream Software",
+  "url": "http://www.puffstream.com",
+  "author": "Puff Stream",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "laravel-elixir": "*"
+  }
+}

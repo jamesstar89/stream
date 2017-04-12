@@ -1,0 +1,45 @@
+<div class="post ng-cloak" ng-show="page.loaded===true" ng-repeat="tag in tags">
+    <md-content class="md-padding" layout-xs="column" layout="row" style="background:none;padding:0">
+        <div flex-xs flex-gt-xs="100" layout="column">
+          <md-card ng-repeat="post in tag.posts">     
+            <md-card-header style="padding:10px 16px;">
+              <md-card-header-text>
+                <span class="md-title"><% ::post.author.author_prefix %></span>
+                <span class="md-subhead">
+                    <a href="/tag/<% ::tag.id %>#/list">
+                        <% ::tag.name %></span>
+                    </a>
+              </md-card-header-text>
+            </md-card-header>
+            <div ng-repeat="photo in post.photos" ng-if="post.photos.length > 0 && $index === 0">
+                <img ng-src="<% ::photo.url %>" class="md-card-image" alt="Washed Out">
+            </div>      
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">
+                    <% ::post.title %>
+                </span>
+              </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+              <p>
+                <% ::post.body.trim() | limitTo: 250 %><span>...</span>
+              </p>
+                <md-grid-list
+                md-cols-xs="4" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6"
+                md-row-height-gt-md="1:1" md-row-height="2:2"
+                md-gutter="12px" md-gutter-gt-sm="8px" >
+                    <md-grid-tile ng-repeat="photo in post.photos" ng-if="post.photos.length > 0" md-rowspan="1" md-colspan="1" md-colspan-sm="1" style="border:#ddd 1px solid">
+                        <a href="<% ::photo.url %>" class="image-holder" data-lightbox="photogrid_ng<% ::post.id %>" data-title="<div class='view-post'><a href='/post/<% ::post.id %>/#/detail'>View post</a></div><div class='caption'></div>">
+                            <img ng-src="<% ::photo.url %>" class="md-card-image" alt="" style="max-width:100%;">
+                        </a> 
+                    </md-grid-tile>
+                </md-grid-list>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <a href="/post/<% ::post.id %>/#/detail" style="color:black"><md-button>Details</md-button></a>
+            </md-card-actions>
+          </md-card>
+        </div>
+    </md-content>
+</div>

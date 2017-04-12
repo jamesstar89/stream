@@ -1,0 +1,70 @@
+<a ng-click="closeOverlay()" style="float:right;position:absolute;top:15px;right:20px;cursor:pointer">
+	<span class="glyphicon glyphicon-remove" aria-hidden="true" style="font-size:27px"></span>
+</a>
+<div class="row" style="margin-top:65px">
+  <div class="col-md-3 hidden-xs hidden-sm">
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6">
+      <form class="form-inline">
+        <h1>Discover a stream</h1>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" name="tag" placeholder="Enter a stream name" ng-model="tagSearchData" ng-change="tagSearch()" class="form-control" style="min-width:400px;height:auto;font-size:17px;" />
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" ng-click="go()" style="height:38px;font-size:16px;vertical-align:top;">Go</button>
+        <div class="search-results" style="display:none;margin-top:10px;">
+          <div>
+            <h4 class="tag-header" style="display:none;font-size:20px;margin-top:20px;">Streams found</h4>
+            <div class="tag-results" style="display:none"></div>
+            <h4 class="post-header" style="display:none;font-size:20px;margin-top:25px;">Post found</h4>
+            <div class="post-results" style="display:none"></div>
+            <!--
+            <h4>Related Photos found</h4>
+            <div>
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-xs-12 col-sm-4">
+                        <div>
+                            <img src="http://i.dailymail.co.uk/i/pix/2013/10/02/article-2441512-02650200000005DC-411_634x380.jpg" style="max-width:100%" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div>
+                            <img src="http://i.dailymail.co.uk/i/pix/2013/10/02/article-2441512-02650200000005DC-411_634x380.jpg" style="max-width:100%" />
+                        </div>
+                    </div>
+                  <div class="col-xs-12 col-sm-4">
+                        <div>
+                            <img src="http://i.dailymail.co.uk/i/pix/2013/10/02/article-2441512-02650200000005DC-411_634x380.jpg" style="max-width:100%" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div>
+                            <img src="http://i.dailymail.co.uk/i/pix/2013/10/02/article-2441512-02650200000005DC-411_634x380.jpg" style="max-width:100%" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div>
+                            <img src="http://i.dailymail.co.uk/i/pix/2013/10/02/article-2441512-02650200000005DC-411_634x380.jpg" style="max-width:100%" />
+                        </div>
+                    </div>
+                  <div class="col-xs-12 col-sm-4">
+                        <div>
+                            <img src="http://i.dailymail.co.uk/i/pix/2013/10/02/article-2441512-02650200000005DC-411_634x380.jpg" style="max-width:100%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+          </div> 
+        </div>
+        <!-- make into a directive -->
+        <div class="create-new-tag" style="display:none;margin:10px 0 20px 0">
+            <div ng-show="auth===true">Stream <a href="#" ui-sref="add" ng-click="createTag()"><% tagSearchData %></a> not found, be the first to <a href="#" ui-sref="add" ng-click="createTag()">create</a> it.</div>
+            <div ng-show="auth!=true">Stream <a href="/signin"><% tagSearchData %></a> not found, be the first to <a href="/signin">create</a> it.</div>
+        </div>
+      </form>
+  </div>  
+</div>

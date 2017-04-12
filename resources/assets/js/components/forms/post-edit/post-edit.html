@@ -1,0 +1,46 @@
+<a ng-click="closeOverlay()" style="float:right;position:absolute;top:15px;right:20px;cursor:pointer">
+	<span class="glyphicon glyphicon-remove" aria-hidden="true" style="font-size:27px"></span>
+</a>
+<div class="row" style="margin-top:65px">
+  <div class="col-md-3 hidden-xs hidden-sm">
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6">
+    <form class="post-edit-form" method="put">
+        <div class="post-edit-group">
+          <h1>Edit Post</h1>
+          <div class="form-group">
+            <input type="text" name="title" placeholder="Title" class="form-control" style="min-width:400px;height:auto;font-size:17px;" />
+          </div>
+          <div class="form-group">
+            <textarea type="text" name="body" placeholder="Body" class="form-control" style="min-width:400px;height:300px;font-size:17px;"></textarea>
+          </div>
+          <div class="row form-group" style="margin:0 0 15px 0;">
+            <div class="col-xs-6 text-primary text-left text-preloader" style="padding:0;font-weight:bold;font-size:15px;display:none;">Please wait while photos upload.</div>
+            <a href="javascript:void(0)" class="col-xs-6 text-right" style="float:right;padding:0;font-size:15px;" ng-click="updateImages()">Update images</a> 
+          </div>
+          <div class="form-group text-right">
+            <button type="button" ng-click="editPost()" class="btn edit-button btn-primary" style="height:38px;font-size:16px">Edit</button>
+          </div>
+        </div>
+        <div class="image-edit-group" style="display:none;">
+          <h1>Edit Image</h1>
+          <p style="font-size:15px">Remove or <a href="javascript:void(0)" ngf-select="uploadFiles($files, $invalidFiles)" multiple accept="image/*" ngf-max-files="<% imagesMax %>" ngf-max-height="1800" ngf-max-size="2MB">add new images</a> (select up to 4 photos).</p>
+          <div class="well">
+            <div class="text-center" ng-show="files.length === 0 && imagesMax === 4">
+                <button ngf-select="uploadFiles($files, $invalidFiles)" class="btn btn-default" multiple accept="image/*" ngf-max-files="<% imagesMax %>" ngf-max-height="1800" ngf-max-size="2MB" style="height:38px;font-size:16px">Select Photos</button>
+            </div>
+            <div class="photo-list"></div> 
+            <div ng-repeat="f in files" ng-show="f" style="font:smaller">
+                <div style="margin-bottom:5px">
+                    <img ng-show="postAddForm.file.$valid" ngf-thumbnail="f" class="thumb" style="width:100px;margin-right:12px;"><button class="btn btn-danger" style="height:38px;font-size:16px" ng-click="deleteFile($index)">Remove</button> 
+                </div>
+            </div>
+            <div ng-repeat="f in errFiles" style="font-size:15px;" class="text-danger"><%f.name%> <%f.$error%> <%f.$errorParam%></div>
+          </div>
+          <div class="form-group text-right">
+            <button type="button" class="btn btn-primary" style="height:38px;font-size:16px" ng-click="done()">Finish post</button>
+          </div>
+        </div>
+      </form>
+  </div>  
+</div>
