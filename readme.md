@@ -4,34 +4,36 @@ Stream is a Content Publishing Open Source Software under the MIT License. Simpl
 # Requirements #
 
 ## Server ##
-- PHP 7.0.12
+- PHP 5.6
 - OpenSSL PHP Extension
 - PDO PHP Extension
 - Mbstring PHP Extension
 - Tokenizer PHP Extension
 - XML PHP Extension
-- Composer
 
 ## Database ##
-- MySQL 5.7
+- MySQL/MariaDB
 
-## Building (optional) ##
-- Laravel 5.3
-- VueJS 2.0
+## Libs/Frameworks/Tools ##
+- Laravel Lumen
+- React
 - Node/NPM
+- Composer
+
+## DX (Developer Experience) set-up ##
+- Set up Vagrant, VirtualBox and Homestead box
+
+# Installation - Front-End #
+1. Git clone the Stream repository
+2. npm install
 
 # Installation - Back-End #
-1. Git clone the Stream repository
-2. composer install
-3. Set up an empty database in MySQL
-4. Set up a .env configuration file
-5. Run php artisan key:generate
-6. Run php artisan serve
-7. Run new migration
-8. Browse to http://localhost:8000
-
-# Last screenshot... (master) #
-![alt text](screenshots/stream-v001.png "Stream v0.0.1")
+1. cd api/ composer install
+2. Set up a .env configuration file
+3. Run php artisan key:generate
+4. vagrant up
+5. vagrant SSH run migration
+6. Browse to http://192.168.10.10
 
 ## Looking for our legacy code? ##
 [git clone -b legacy-code --single-branch https://github.com/puffstream/stream.git](https://github.com/puffstream/stream/tree/legacy-code)
