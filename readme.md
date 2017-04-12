@@ -39,9 +39,9 @@ Stream is a Content Publishing Open Source Software under the MIT License. Simpl
 [git clone -b legacy-code --single-branch https://github.com/puffstream/stream.git](https://github.com/puffstream/stream/tree/legacy-code)
 
 ### What happened to the previous code? ###
-What's that quote? 1 step back, 2 steps forward? That's the one. Before I can really charge ahead with the Stream Software, I need to have a clear understanding of what Stream is, what it isn't. For example, Stream isn't a News feed. I think that's one of the main issues with the legacy code was that it was still conforming to a News feed where the context of Stream is set apart from this. If your interested in the Stream topic, feel free to follow me on my [Blog](https://streamwebcontent.wordpress.com/).
+What's that quote? 1 step back, 2 steps forward? That's the one. Before I can really charge ahead with the Stream Software, I need to have a clear understanding of what Stream is, what it isn't. For example, Stream isn't a News feed. I think that's one of the main issues with the legacy code was that it was still conforming to a News feed where the context of Stream is set apart from this. If your interested in Stream, feel free to follow the [Stream Docs](https://puffstream.atlassian.net/wiki/spaces/STREAM/overview).
 
-In the mean-time I have started the next version of Stream, built with Laravel 5.3, VueJS 2, MySQL 5.7 and using JSON Type.
+Or, optionally read the below updates:
 
 #### Most recent activities (29/03/17)
 * Reviewing Laravel Lumen (API version)
