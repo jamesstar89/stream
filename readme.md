@@ -1,6 +1,6 @@
 # Stream. Curating your streams #
 
-> With Stream you can add new content and collaborate in moments.
+> With Stream you can create and collaborate in moments.
 
 Stream helps you to create - build - and collaborate across streams of content. Create your first stream or many streams, build them up, or dispose of them when you need to.
 
