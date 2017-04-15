@@ -1,5 +1,12 @@
-# Overview #
-Stream is a Content Publishing Open Source Software under the MIT License. Simply write something and publish to your stream. Stream has been designed to make writing anything fun and easy. Stream is free and simple to customise.
+# Stream. Curating your streams #
+
+> With Stream you can add new content and collaborate in moments.
+
+Stream helps you to create - build - and collaborate across streams of content. Create your first stream or many streams, build them up, or dispose of them when you need to.
+
+Stream is a great way to manage large amounts of content and channels, from Social Networks, to blogs and websites. Stream is set to challenge the norm. Interested? Sign up now. Reply here.
+
+"Just say stream..."
 
 # Requirements #
 
