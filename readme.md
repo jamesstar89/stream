@@ -4,7 +4,7 @@
 
 Stream helps you to create - build - and collaborate across streams of content. Create your first stream or many streams, build them up, or dispose of them when you need to.
 
-Stream is a great way to manage large amounts of content and channels, from Social Networks, to blogs and websites. Stream is set to challenge the norm. Interested? Sign up now. Reply here.
+Stream is a great way to manage large amounts of content and channels, from Social Networks, to blogs and websites. Stream is set to challenge the norm.
 
 "Just say stream..."
 
