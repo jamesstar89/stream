@@ -8,7 +8,7 @@ Stream is a great way to manage large amounts of content and channels, from Soci
 
 "Just say stream..."
 
-<img src="screenshots/social-network-logos.png" alt="Social networks" width="770" height="368"/>
+<img src="screenshots/social-network-logos.png" alt="Social networks"/>
 
 # Requirements #
 
