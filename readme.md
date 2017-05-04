@@ -10,6 +10,18 @@ Stream is a great way to manage large amounts of content and channels, from Soci
 
 <img src="screenshots/social-network-logos.png" alt="Social networks"/>
 
+# Checklist #
+
+If you would like to help out, contact me @puffstream, alternatively send me a PR. 
+
+    * [x] Set-up React / Lumen / Vagrant
+    * [ ] Authentication
+    * [ ] Filter by keyword
+    * [ ] Initial migration/seeding
+    * [ ] Streams - create / list / destroy
+    * [ ] Posts - create / list / destroy
+    * [ ] Posts - like / share
+
 # Requirements #
 
 ## Server ##
