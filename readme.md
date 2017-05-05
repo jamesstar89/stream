@@ -14,13 +14,13 @@ Stream is a great way to manage large amounts of content and channels, from Soci
 
 If you would like to help out, contact me @puffstream, alternatively send me a PR. 
 
-    * [x] Set-up React / Lumen / Vagrant
-    * [ ] Authentication
-    * [ ] Filter by keyword
-    * [ ] Initial migration/seeding
-    * [ ] Streams - create / list / destroy
-    * [ ] Posts - create / list / destroy
-    * [ ] Posts - like / share
+- [x] Set-up React / Lumen / Vagrant
+- [ ] Authentication
+- [ ] Filter by keyword
+- [ ] Initial migration/seeding
+- [ ] Streams - create / list / destroy
+- [ ] Posts - create / list / destroy
+- [ ] Posts - like / share
 
 # Requirements #
 
