@@ -27,12 +27,13 @@
     "style-loader": "^0.13.1",
     "svg-inline-loader": "^0.7.1",
     "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.15.0",
     "webpack-hot-middleware": "^2.16.1",
     "webpack-module-hot-accept": "^1.0.4"
   },
   "scripts": {
     "start": "",
-    "dev": "webpack-dev-server --hot",
+    "dev": "webpack-dev-server --port 3000 --hot --host 0.0.0.0",
     "server": "cd api && php -S localhost:8000 -t public"
   },
   "author": "Puff Stream"

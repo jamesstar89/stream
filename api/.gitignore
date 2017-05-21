@@ -1,5 +1,6 @@
-/vendor
-/.idea
+vendor
 Homestead.json
-Homestead.yaml
+composer.phar
+.vagrant
 .env
+.DS_Store
