@@ -1,6 +1,8 @@
 ---
 
-NOTICE: This library will be retiring shortly. Thank you for all contributions to the stream project.
+# Notice #
+
+This library will be retiring shortly. Thank you for all contributions to the stream project.
 
 ---
 
