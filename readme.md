@@ -8,6 +8,8 @@ This library will be retiring shortly. Thank you for all contributions to the st
 
 # Stream. Curating your streams #
 
+![logo](https://github.com/rijal10/stream/blob/master/logo/250%20PX.png)
+
 > With Stream you can create and collaborate in moments.
 
 Stream helps you to create - build - and collaborate across streams of content. Create your first stream or many streams, build them up, or dispose of them when you need to.
