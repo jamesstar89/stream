@@ -1,3 +1,9 @@
+---
+
+NOTICE: This library will be retiring shortly. Thank you for all contributions to the stream project.
+
+---
+
 # Stream. Curating your streams #
 
 > With Stream you can create and collaborate in moments.
